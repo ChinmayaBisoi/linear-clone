@@ -12,7 +12,11 @@ const sizeMap = {
   lg: { icon: 32, text: "text-lg" },
 };
 
-export function Logo({ className, showWordmark = true, size = "md" }: LogoProps) {
+export function Logo({
+  className,
+  showWordmark = true,
+  size = "md",
+}: LogoProps) {
   const { icon: iconSize, text } = sizeMap[size];
 
   return (
@@ -37,10 +41,7 @@ export function Logo({ className, showWordmark = true, size = "md" }: LogoProps)
       </svg>
       {showWordmark && (
         <span
-          className={cn(
-            "font-semibold tracking-tight text-zinc-100",
-            text,
-          )}
+          className={cn("font-semibold tracking-tight text-zinc-100", text)}
         >
           Linear
         </span>

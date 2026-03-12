@@ -1,3 +1,4 @@
+import { HeaderAuth } from "~/components/HeaderAuth";
 import { Logo } from "~/components/Logo";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -202,12 +203,7 @@ export default function Home() {
               Pricing
             </a>
           </nav>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" className="hidden text-xs md:inline-flex">
-              Log in
-            </Button>
-            <Button className="rounded-full px-4 text-xs">Sign up</Button>
-          </div>
+          <HeaderAuth />
         </div>
       </header>
       <main className="flex-1">
