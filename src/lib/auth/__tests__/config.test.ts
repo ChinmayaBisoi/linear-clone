@@ -1,6 +1,14 @@
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("~/lib/db", () => ({ prisma: {} }));
+vi.mock("~/lib/env", () => ({
+  env: {
+    APPLICATION_URL: "http://localhost:3000",
+    BETTER_AUTH_SECRET: "x".repeat(32),
+    GOOGLE_CLIENT_ID: "",
+    GOOGLE_CLIENT_SECRET: "",
+  },
+}));
 
 import { authOptions } from "~/lib/auth/config";
 

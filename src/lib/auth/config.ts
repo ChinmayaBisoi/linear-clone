@@ -2,13 +2,12 @@ import type { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { bearer, emailOTP } from "better-auth/plugins";
 import { sendVerificationOTP } from "~/lib/auth/transport";
+import { env } from "~/lib/env";
 import { prisma } from "~/lib/db";
 
-const baseURL = process.env.BETTER_AUTH_URL ?? "http://localhost:3000";
-
 export const authOptions: Parameters<typeof betterAuth>[0] = {
-  baseURL,
-  secret: process.env.BETTER_AUTH_SECRET,
+  baseURL: env.APPLICATION_URL,
+  secret: env.BETTER_AUTH_SECRET,
   database: prismaAdapter(prisma, {
     provider: "postgresql",
   }),
@@ -57,8 +56,8 @@ export const authOptions: Parameters<typeof betterAuth>[0] = {
   },
   socialProviders: {
     google: {
-      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
     },
   },
   plugins: [

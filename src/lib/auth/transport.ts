@@ -1,3 +1,5 @@
+import { env } from "~/lib/env";
+
 /**
  * Email transport for OTP and verification emails.
  * In development, OTP is logged to the server console.
@@ -13,7 +15,7 @@ export async function sendVerificationOTP(
   params: SendVerificationOTPParams,
 ): Promise<void> {
   const { email, otp, type } = params;
-  if (process.env.NODE_ENV === "development") {
+  if (env.NODE_ENV === "development") {
     // eslint-disable-next-line no-console
     console.log(`[Auth] OTP for ${type} (${email}): ${otp}`);
     return;

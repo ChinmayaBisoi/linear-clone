@@ -1,4 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
+
+vi.mock("~/lib/env", () => ({ env: { NODE_ENV: "development" } }));
+
 import { sendVerificationOTP } from "~/lib/auth/transport";
 
 describe("sendVerificationOTP", () => {
