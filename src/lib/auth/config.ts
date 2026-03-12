@@ -2,8 +2,8 @@ import type { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { bearer, emailOTP } from "better-auth/plugins";
 import { sendVerificationOTP } from "~/lib/auth/transport";
-import { env } from "~/lib/env";
 import { prisma } from "~/lib/db";
+import { env } from "~/lib/env";
 
 export const authOptions: Parameters<typeof betterAuth>[0] = {
   baseURL: env.APPLICATION_URL,

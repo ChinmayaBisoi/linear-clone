@@ -11,13 +11,11 @@ function makePrisma() {
     log:
       env.NODE_ENV === "development"
         ? [
-
-          // "query", 
-          "info",
-          "error", 
-          "warn"
-
-        ]
+            // "query",
+            "info",
+            "error",
+            "warn",
+          ]
         : ["error"],
   });
 }

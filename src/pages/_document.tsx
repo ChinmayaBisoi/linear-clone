@@ -5,6 +5,11 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://tweakcn.com/live-preview.min.js"
+        />
       </Head>
       <body>
         <Main />
