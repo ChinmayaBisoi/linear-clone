@@ -27,21 +27,17 @@ export function Logo({
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0 text-violet-400"
+        className="shrink-0 text-primary"
         aria-hidden={showWordmark}
         role={showWordmark ? undefined : "img"}
       >
         <title>Linear</title>
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M8 4v20h14v2H6v-2V4H8Z"
-          fill="currentColor"
-        />
+        <path fill="currentColor" d="M6 6h2v20H4V6Z" />
+        <path fill="currentColor" d="M10 22h12v4H10v-2Z" />
       </svg>
       {showWordmark && (
         <span
-          className={cn("font-semibold tracking-tight text-zinc-100", text)}
+          className={cn("font-semibold tracking-tight text-foreground", text)}
         >
           Linear
         </span>

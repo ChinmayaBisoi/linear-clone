@@ -1,3 +1,5 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4v20h14v2H6v-2V4H8Z" fill="#a78bfa"/>
+  <!-- <circle cx="16" cy="16" r="14" fill="none" stroke="#e86b1a" stroke-width="1.5" /> -->
+  <path fill="#e86b1a" d="M6 6h2v20H4V6Z" />
+  <path fill="#e86b1a" d="M10 22h12v4H10v-2Z" />
 </svg>
